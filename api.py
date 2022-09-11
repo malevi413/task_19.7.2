@@ -85,7 +85,7 @@ class PetFriends:
 
     def update_pet_info(self, auth_key: json, pet_id: str, name: str,
                         animal_type: str, age: int) -> json:
-        """Метод отправляет запрос на сервер об обновлении данных питомуа по указанному ID и
+        """Метод отправляет запрос на сервер об обновлении данных питомца по указанному ID и
         возвращает статус запроса и result в формате JSON с обновлённыи данными питомца"""
 
         headers = {'auth_key': auth_key['key']}
@@ -122,6 +122,7 @@ class PetFriends:
         print(result)
         return status, result
 
+     """обновлении данных питомца по указанному ID без фото"""
     def add_new_pet_no_foto(self, auth_key: json, name: str, animal_type: str,
                     age: str) -> json:
         data = MultipartEncoder(
